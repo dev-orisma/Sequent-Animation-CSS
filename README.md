@@ -49,3 +49,5 @@ delay :
   Type: [Int] (millisacound)
   Animation will active delay after previous sequent Element active
 ```
+- Demo:
+[http://projectgn.org/td3/MiniProject/test.html](http://projectgn.org/td3/MiniProject/test.html "Title")
