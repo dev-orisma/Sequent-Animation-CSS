@@ -19,7 +19,7 @@ function play_sani() {
 function init_sani() {
     $(".sani").each(function() {
         var sani_obj = new sequent_anime();
-        var data_value = refined_data($(this).attr("sain-data"));
+        var data_value = refined_data($(this).attr("sani-data"));
         sani_obj.target = $(this);
         sani_obj.scroll = data_value["scroll"];
         sani_obj.after = data_value["after"];

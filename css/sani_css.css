@@ -11,6 +11,20 @@ body {
   opacity: 1;
   transition: top 1s, opacity 1s;
 }
+.begin-2 {
+  position: relative;
+  top: 100px;
+  left: 300px;
+  transform: rotate(180deg);
+  opacity: 0;
+}
+.end-2 {
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: top 1s, left 1s, opacity 1s, transform 1s;
+}
 .ani_box {
   width: 300px;
   height: 300px;
