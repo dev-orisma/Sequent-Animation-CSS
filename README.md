@@ -3,13 +3,13 @@
 DOM element Example
 
 ```HTML
-<div class='sani first begin' sani-data="scroll:0,after:null,from_class:begin,to_class:end,delay:500">
+<div class='ani_box sani first begin'  sani-data="scroll:0,after:null,from_class:begin,to_class:end,delay:500">
     test1
 </div>
-<div class='sani' id='second' sani-data="scroll:0,after:.first,from_class:begin,to_class:end,delay:500">
+<div class='ani_box sani' id='second' sani-data="scroll:0,after:.first,from_class:begin,to_class:end,delay:500">
     test2
 </div>
-<div class='sani' id='s3' sani-data="scroll:0,after:#second,from_class:begin,to_class:end,delay:100">
+<div class='ani_box sani' id='s3' sani-data="scroll:0,after:#second,from_class:begin-2,to_class:end-2,delay:100">
     test3
 </div>
 ```
