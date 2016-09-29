@@ -15,7 +15,7 @@ body {
   position: relative;
   top: 100px;
   left: 300px;
-  transform: rotate(180deg);
+  transform: rotate(500deg);
   opacity: 0;
 }
 .end-2 {

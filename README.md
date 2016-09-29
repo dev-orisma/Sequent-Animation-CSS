@@ -1,7 +1,14 @@
 # Sequent-Animation-CSS
+Using
 
-DOM element Example
+ - Javascript
+    * Require Jquery
+```HTML
+ <script src="js/jquery-3.1.0.min.js"></script>
+ <script src="js/sani_css.js"></script> 
+``` 
 
+ - HTML
 ```HTML
 <div class='ani_box sani first begin'  sani-data="scroll:0,after:null,from_class:begin,to_class:end,delay:500">
     test1
@@ -14,6 +21,8 @@ DOM element Example
 </div>
 ```
 
+
+ - Attribute
 ```TEXT
 sani-data : Animation Properties
 
