@@ -63,4 +63,4 @@ delay :
   Animation will active delay after previous sequent Element active
 ```
 - Demo:
-[https://soghband.github.io/Sequent-Animation-CSS/test.html](https://soghband.github.io/Sequent-Animation-CSS/test.html "Title")
+[https://dev-orisma.github.io/Sequent-Animation-CSS/test.html](https://dev-orisma.github.io/Sequent-Animation-CSS/test.html "Title")
