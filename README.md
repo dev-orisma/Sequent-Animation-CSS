@@ -1,17 +1,18 @@
 # Sequent-Animation-CSS
-Using
+##Using
+
 
  - Javascript
     * Require Jquery
 
 
-Include File
+###Include File
 ```HTML
  <script src="js/jquery-3.1.0.min.js"></script>
  <script src="js/sani_css.js"></script> 
  <script src="js/sani_init.js"></script> 
 ``` 
-Init Script
+###Init Script
 ```Javascript
 var anime1 = new animation("begin","end","500"); //Set Animation Class 
 $(document).ready(function() {
@@ -19,9 +20,23 @@ $(document).ready(function() {
     play_sani();
 });
 ``` 
-    
+####Animetion Class
+ - Class name: animation()
+ - Attribute
+    - from:   Type: [String]
+              * CSS Class name with no transition attribute begin position *
+              Start CSS Class
+    - to:   Type: [String]
+            * CSS Class name with transition attribute end position *
+            Element will transition CSS Class to this class
+    - delay:   Type: [Int] (millisacound)
+               Animation will active delay after previous sequent Element active
+ - Syntax
+    - var animation_obj = new animation([Begin CSS Class],[End CSS Class],[Delay]); 
+ - Example
+    - ```var anime1 = new animation("begin","end","500");```
 
- - HTML
+###HTML
 ```HTML
 <div class='ani_box sani first begin'  sani-data="scroll:0,after:null,from_class:begin,to_class:end,delay:500">
     test1
@@ -35,7 +50,7 @@ $(document).ready(function() {
 ```
 
 
- - Attribute
+###Attribute
 ```TEXT
 sani-data : Animation Properties
 
@@ -62,5 +77,5 @@ delay :
   Type: [Int] (millisacound)
   Animation will active delay after previous sequent Element active
 ```
-- Demo:
+###Demo:
 [https://dev-orisma.github.io/Sequent-Animation-CSS/test.html](https://dev-orisma.github.io/Sequent-Animation-CSS/test.html "Title")
