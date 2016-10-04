@@ -1,7 +1,5 @@
 var tempSani = [];
 $(document).ready(function() {
-    init_sani();
-    play_sani();
     $(window).scroll(function() {
         play_sani();
     });
@@ -20,15 +18,27 @@ function init_sani() {
     $(".sani").each(function() {
         var sani_obj = new sequent_anime();
         var data_value = refined_data($(this).attr("sani-data"));
+        var begin_anime;
         sani_obj.target = $(this);
         sani_obj.scroll = data_value["scroll"];
         sani_obj.after = data_value["after"];
-        sani_obj.from_class = data_value["from_class"];
-        sani_obj.to_class = data_value["to_class"];
-        sani_obj.delay = data_value["delay"];
+        if (typeof(data_value["from_class"]) == "string" && typeof(data_value["to_class"]) == "string" && typeof(data_value["delay"]) == "string") {
+            sani_obj.from_class = data_value["from_class"];
+            sani_obj.to_class = data_value["to_class"];
+            sani_obj.delay = data_value["delay"];
+            begin_anime =  data_value["from_class"];
+        } else if (typeof(data_value["animation"]) == "string") {
+            var anime_class = window[data_value["animation"]];
+            sani_obj.from_class = anime_class.from;
+            sani_obj.to_class = anime_class.to;
+            sani_obj.delay = anime_class.delay;
+            begin_anime =  anime_class.from;
+        } else {
+            console.error("Animation not defined.");
+        }
         tempSani.push(sani_obj);
-        if (!$(this).hasClass(data_value["from_class"])) {
-            $(this).addClass(data_value["from_class"]);
+        if (!$(this).hasClass(begin_anime)) {
+            $(this).addClass(begin_anime);
         }
     });
 }
@@ -48,6 +58,11 @@ var sequent_anime = function() {
     var from_class;
     var to_class;
     var delay;
+}
+var animation = function(from,to,delay) {
+    this.from = from;
+    this.to = to;
+    this.delay = delay;
 }
 sequent_anime.prototype.active = function() {
     setTimeout(function(obj) {
