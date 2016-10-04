@@ -3,17 +3,30 @@ Using
 
  - Javascript
     * Require Jquery
+
+
+Include File
 ```HTML
  <script src="js/jquery-3.1.0.min.js"></script>
  <script src="js/sani_css.js"></script> 
+ <script src="js/sani_init.js"></script> 
 ``` 
+Init Script
+```Javascript
+var anime1 = new animation("begin","end","500"); //Set Animation Class 
+$(document).ready(function() {
+    init_sani();
+    play_sani();
+});
+``` 
+    
 
  - HTML
 ```HTML
 <div class='ani_box sani first begin'  sani-data="scroll:0,after:null,from_class:begin,to_class:end,delay:500">
     test1
 </div>
-<div class='ani_box sani' id='second' sani-data="scroll:0,after:.first,from_class:begin,to_class:end,delay:500">
+<div class='ani_box sani' id='second' sani-data="scroll:0,after:.first,animation:anime1">
     test2
 </div>
 <div class='ani_box sani' id='s3' sani-data="scroll:0,after:#second,from_class:begin-2,to_class:end-2,delay:100">
